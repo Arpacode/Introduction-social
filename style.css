@@ -191,3 +191,24 @@ a:hover {
     display: inline-block;
   }
 }
+.music-player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#musicBtn {
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+#musicBtn:hover {
+  background-color: #ff5c7a;
+}
