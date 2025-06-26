@@ -46,3 +46,20 @@ function resetGame() {
   document.getElementById("feedback").textContent = "";
   document.getElementById("guessInput").value = "";
 }
+
+let isPlaying = false;
+
+function toggleMusic() {
+  const music = document.getElementById("bgMusic");
+  const btn = document.getElementById("musicBtn");
+
+  if (!isPlaying) {
+    music.play();
+    btn.textContent = "🔇 Pause Music";
+  } else {
+    music.pause();
+    btn.textContent = "🎵 Play Music";
+  }
+
+  isPlaying = !isPlaying;
+}
