@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AM | Portfolio</title>
+  <!-- Linking external stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Theme toggle button (Dark/Light) -->
+  <button class="toggle-btn" onclick="toggleTheme()">Mode</button>
+  
+  <!-- Main header and animated tagline -->
+  <h1>Arpan Murmu</h1>
+  <p class="tagline typewriter" id="tagline">Future Game Engineer</p>
+
+  <!-- Fun personal info list -->
+  <ul>
+    <li>15 y/o</li>
+    <li>Passionate about <strong>Python</strong> & <strong>Java</strong></li>
+    <li>Math enthusiast</li>
+    <li>Big fan of <em>The Weeknd</em></li>
+    <li>Chess player | 1200 Elo</li>
+    <li>Trying Finding the real <strong>ONE</strong> ;)</li>
+  </ul>
+
+  <!-- GitHub link -->
+  <p><a href="https://github.com/Arpacode" target="_blank">Check out my GitHub</a></p>
+
+  <!-- 🎮 Mini number guessing game -->
+  <div id="game" style="margin-top: 4rem;">
+    <h2>🎮 Mini Game: Guess the Number</h2>
+    <p>I'm thinking of a number between 1 and 100...</p>
+    <input type="number" id="guessInput" placeholder="Enter your guess" />
+    <button onclick="checkGuess()">Guess</button>
+    <p id="feedback"></p>
+    <button onclick="resetGame()" style="margin-top: 10px;">🔄 Restart</button>
+  </div>
+
+  <!-- JavaScript logic -->
+  <script src="script.js"></script>
+</body>
+    </html>
