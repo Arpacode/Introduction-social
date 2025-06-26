@@ -1,0 +1,150 @@
+/* 🌑 Default dark theme variables */
+:root {
+  --bg-color: #0e0e0e;
+  --text-color: #eeeeee;
+  --accent-color: #f43f5e;
+  --link-color: #4eaaff;
+}
+
+/* 🌞 Light theme override when class "light" is added */
+body.light {
+  --bg-color: #f4f4f4;
+  --text-color: #1e1e1e;
+  --accent-color: #007acc;
+  --link-color: #1e90ff;
+}
+
+/* Main body styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Smooth fade-in animations for elements */
+h1, .tagline, ul, p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Main heading style */
+h1 {
+  color: var(--accent-color);
+  animation-delay: 0.3s;
+  font-size: 3rem;
+}
+
+/* Sub-heading / tagline style */
+.tagline {
+  font-size: 1.4em;
+  margin-top: 10px;
+  animation-delay: 0.5s;
+}
+
+/* Unordered list styling */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+  animation-delay: 0.7s;
+}
+
+li {
+  margin: 8px 0;
+  transition: transform 0.3s ease;
+}
+
+/* Small hover effect on list items */
+li:hover {
+  transform: scale(1.05);
+}
+
+/* Paragraph fade-in delay */
+p {
+  animation-delay: 0.9s;
+}
+
+/* Link color + hover effect */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #81cfff;
+  text-decoration: underline;
+}
+
+/* Keyframes for fade-up animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Theme toggle button style */
+.toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+/* Typewriter blinking cursor effect */
+.typewriter::after {
+  content: "|";
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* 🎮 Game input styling */
+#game input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 200px;
+  margin-top: 1rem;
+}
+
+/* 🎮 Game buttons styling */
+#game button {
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#game button:hover {
+  background-color: #ff5c7a;
+}
