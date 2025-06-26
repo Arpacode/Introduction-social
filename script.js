@@ -1,9 +1,9 @@
-// 🌗 Toggle dark/light theme
+// Toggle dark/light theme
 function toggleTheme() {
   document.body.classList.toggle('light');
 }
 
-// 🧠 Typewriter effect for tagline
+// Typewriter effect for tagline
 const tagline = document.getElementById('tagline');
 const text = "Future Game Engineer";
 let i = 0;
@@ -12,14 +12,14 @@ function type() {
   if (i <= text.length) {
     tagline.textContent = text.substring(0, i);
     i++;
-    setTimeout(type, 80); // Typing speed
+    setTimeout(type, 20); // Typing speed
   }
 }
 
 // When page loads, start typing animation
 window.onload = type;
 
-// 🎮 Number guessing game logic
+// Number guessing game logic
 let secretNumber = Math.floor(Math.random() * 100) + 1; // Generate random number from 1-100
 
 function checkGuess() {
@@ -32,15 +32,15 @@ function checkGuess() {
   }
 
   if (guess < secretNumber) {
-    feedback.textContent = "📉 Too low!";
+    feedback.textContent = " Too low!";
   } else if (guess > secretNumber) {
-    feedback.textContent = "📈 Too high!";
+    feedback.textContent = " Too high!";
   } else {
     feedback.textContent = "🎉 You got it! Great job!";
   }
 }
 
-// 🔄 Restart the game with a new number
+//  Restart the game with a new number
 function resetGame() {
   secretNumber = Math.floor(Math.random() * 100) + 1;
   document.getElementById("feedback").textContent = "";
@@ -55,10 +55,10 @@ function toggleMusic() {
 
   if (!isPlaying) {
     music.play();
-    btn.textContent = "🔇 Pause Music";
+    btn.textContent = " Pause Music";
   } else {
     music.pause();
-    btn.textContent = "🎵 Play Music";
+    btn.textContent = " Play Music";
   }
 
   isPlaying = !isPlaying;
